@@ -34,9 +34,10 @@ analysis = [
 [project.scripts]
 hemomesh-inspect = "hemomesh.data.suk:main"
 hemomesh-log-baseline = "hemomesh.baselines.reproduce_suk:main"
+hemomesh-m1-dataset-eda = "scripts.m1_dataset_eda:main"
 
 [tool.setuptools.packages.find]
-include = ["hemomesh*"]
+include = ["hemomesh*", "scripts*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

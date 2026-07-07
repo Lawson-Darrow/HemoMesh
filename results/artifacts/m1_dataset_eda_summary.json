@@ -1,0 +1,36 @@
+[
+  {
+    "face_count_max": 24316,
+    "face_count_mean": 18373.695,
+    "face_count_min": 10928,
+    "inlet_count_mean": 235.4915,
+    "md5": "ba365decba2357fb7b24de641a2133a1",
+    "node_count_max": 12160,
+    "node_count_mean": 9188.8475,
+    "node_count_min": 5466,
+    "num_samples": 2000,
+    "path": "vessel-datasets/stead/single/raw/database.hdf5",
+    "pressure_range_max": 10114.375,
+    "pressure_range_mean": 5215.11189453125,
+    "subset": "single",
+    "wss_mag_max": 548.8169299587145,
+    "wss_mag_mean": 29.11461732641845
+  },
+  {
+    "face_count_max": 49596,
+    "face_count_mean": 33669.170585292646,
+    "face_count_min": 17196,
+    "inlet_count_mean": 837.11955977989,
+    "md5": "b73d96148e4245be1121d57efb6e3d63",
+    "node_count_max": 24800,
+    "node_count_mean": 16836.585292646323,
+    "node_count_min": 8600,
+    "num_samples": 1999,
+    "path": "vessel-datasets/stead/bifurcating/raw/database.hdf5",
+    "pressure_range_max": 20919.5625,
+    "pressure_range_mean": 736.9500805090045,
+    "subset": "bifurcating",
+    "wss_mag_max": 323.1413755520451,
+    "wss_mag_mean": 13.059838282241135
+  }
+]

@@ -1,0 +1,32 @@
+{
+  "example_shapes": {
+    "face": [
+      38430,
+      3
+    ],
+    "inlet_idcs": [
+      921
+    ],
+    "pos": [
+      19217,
+      3
+    ],
+    "pressure": [
+      19217
+    ],
+    "wss": [
+      19217,
+      3
+    ]
+  },
+  "face_count_max": 49596,
+  "face_count_mean": 33669.170585292646,
+  "face_count_min": 17196,
+  "md5": "b73d96148e4245be1121d57efb6e3d63",
+  "node_count_max": 24800,
+  "node_count_mean": 16836.585292646323,
+  "node_count_min": 8600,
+  "num_samples": 1999,
+  "path": "vessel-datasets/stead/bifurcating/raw/database.hdf5",
+  "subset": "bifurcating"
+}

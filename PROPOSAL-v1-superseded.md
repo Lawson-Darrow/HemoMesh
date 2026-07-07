@@ -57,7 +57,7 @@ Evaluate which gives **calibrated per-node** uncertainty against a CFD ensemble 
 - **Synthetic coronary cohort (generated)** — parametric / statistical-shape-model generator producing **1,500–2,000 coronary trees** (single + bifurcating, varying stenosis severity/location). → the **training set**. This is the proven paradigm (the benchmark used 1,500 synthetic LCA bifurcations; Suk et al. ~5,000 CFD sims).
 
 ### Labels (generated via CFD)
-- **SimVascular / svSolver** for 3D steady-state CFD → dense pressure/WSS fields (~minutes/case, embarrassingly parallel on the university GPU cluster).
+- **SimVascular / svSolver** for 3D steady-state CFD → dense pressure/WSS fields (~minutes/case, parallelizable on a Linux GPU/runtime environment).
 - **svZeroDSolver** (0D/1D reduced-order) as a cheap label-bootstrap and a physics baseline.
 - **Pipeline validation first:** reproduce VMR-provided reference CFD results on a handful of cases before scaling — de-risks the single biggest correctness threat.
 
@@ -65,7 +65,7 @@ Evaluate which gives **calibrated per-node** uncertainty against a CFD ensemble 
 - **Train/val:** synthetic cohort.
 - **Test:** held-out **real patient-specific** VMR coronaries (+ any patient-specific CFD cases), scaled-down analog of the benchmark's 427-case real test. The **synthetic-test vs. real-test gap, per backbone, is the central result.**
 
-All tools (SimVascular, PyTorch Geometric) are OSS — honors the prefer-OSS-tools principle. Compute is over-provisioned, which is the advantage: the cluster's real value is parallel CFD label generation + large ablation sweeps, letting the project win on rigor.
+All tools (SimVascular, PyTorch Geometric) are OSS — honors the prefer-OSS-tools principle. The intended compute advantage is parallel CFD label generation + large ablation sweeps, letting the project win on rigor.
 
 ---
 
@@ -104,7 +104,7 @@ All tools (SimVascular, PyTorch Geometric) are OSS — honors the prefer-OSS-too
 ## 6. Milestones (Project-1 cadence)
 
 1. **Scaffold + CFD pipeline.** Package layout (reuse Project 1 harness); pull VMR coronary geometries; stand up SimVascular; **validate svSolver output against VMR reference** on a few cases.
-2. **Data generation.** Parametric/SSM coronary generator → 1,500–2,000 geometries → batch CFD labels (pressure/WSS) on the cluster; build the mesh dataset (PyG).
+2. **Data generation.** Parametric/SSM coronary generator → 1,500–2,000 geometries → batch CFD labels (pressure/WSS) on a Linux GPU/runtime environment; build the mesh dataset (PyG).
 3. **Baselines + harness.** MLP/PointNet baseline; full metric suite (field + vFFR + UQ) with bootstrap CIs; verify on synthetic test (no real-data peeking yet).
 4. **Architecture sweep (Axis A).** GNN → equivariant GNN → mesh-transformer; synthetic-test leaderboard; staged tuning w/ config-hash logging.
 5. **Generalization study.** Unlock the real patient-specific test set; report the synthetic→real gap per backbone — the central result.

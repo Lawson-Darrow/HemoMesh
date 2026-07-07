@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420">
+<rect width="100%" height="100%" fill="white"/>
+<text x="450.0" y="28" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold">Mean WSS Magnitude Distribution</text>
+<line x1="70" y1="350" x2="870" y2="350" stroke="#333"/>
+<line x1="70" y1="50" x2="70" y2="350" stroke="#333"/>
+<rect x="70.00" y="350.00" width="11.11" height="0.00" fill="#3867d6" opacity="0.82"/>
+<rect x="103.33" y="350.00" width="11.11" height="0.00" fill="#3867d6" opacity="0.82"/>
+<rect x="136.67" y="350.00" width="11.11" height="0.00" fill="#3867d6" opacity="0.82"/>
+<rect x="170.00" y="350.00" width="11.11" height="0.00" fill="#3867d6" opacity="0.82"/>
+<rect x="203.33" y="350.00" width="11.11" height="0.00" fill="#3867d6" opacity="0.82"/>
+<rect x="236.67" y="349.04" width="11.11" height="0.96" fill="#3867d6" opacity="0.82"/>
+<rect x="270.00" y="332.75" width="11.11" height="17.25" fill="#3867d6" opacity="0.82"/>
+<rect x="303.33" y="309.27" width="11.11" height="40.73" fill="#3867d6" opacity="0.82"/>
+<rect x="336.67" y="280.99" width="11.11" height="69.01" fill="#3867d6" opacity="0.82"/>
+<rect x="370.00" y="269.01" width="11.11" height="80.99" fill="#3867d6" opacity="0.82"/>
+<rect x="403.33" y="262.78" width="11.11" height="87.22" fill="#3867d6" opacity="0.82"/>
+<rect x="436.67" y="255.59" width="11.11" height="94.41" fill="#3867d6" opacity="0.82"/>
+<rect x="470.00" y="255.11" width="11.11" height="94.89" fill="#3867d6" opacity="0.82"/>
+<rect x="503.33" y="248.88" width="11.11" height="101.12" fill="#3867d6" opacity="0.82"/>
+<rect x="536.67" y="253.19" width="11.11" height="96.81" fill="#3867d6" opacity="0.82"/>
+<rect x="570.00" y="265.65" width="11.11" height="84.35" fill="#3867d6" opacity="0.82"/>
+<rect x="603.33" y="282.91" width="11.11" height="67.09" fill="#3867d6" opacity="0.82"/>
+<rect x="636.67" y="304.47" width="11.11" height="45.53" fill="#3867d6" opacity="0.82"/>
+<rect x="670.00" y="314.06" width="11.11" height="35.94" fill="#3867d6" opacity="0.82"/>
+<rect x="703.33" y="333.23" width="11.11" height="16.77" fill="#3867d6" opacity="0.82"/>
+<rect x="736.67" y="335.62" width="11.11" height="14.38" fill="#3867d6" opacity="0.82"/>
+<rect x="770.00" y="342.81" width="11.11" height="7.19" fill="#3867d6" opacity="0.82"/>
+<rect x="803.33" y="348.08" width="11.11" height="1.92" fill="#3867d6" opacity="0.82"/>
+<rect x="836.67" y="348.08" width="11.11" height="1.92" fill="#3867d6" opacity="0.82"/>
+<rect x="81.11" y="335.62" width="11.11" height="14.38" fill="#20bf6b" opacity="0.82"/>
+<rect x="114.44" y="241.69" width="11.11" height="108.31" fill="#20bf6b" opacity="0.82"/>
+<rect x="147.78" y="50.00" width="11.11" height="300.00" fill="#20bf6b" opacity="0.82"/>
+<rect x="181.11" y="50.00" width="11.11" height="300.00" fill="#20bf6b" opacity="0.82"/>
+<rect x="214.44" y="191.37" width="11.11" height="158.63" fill="#20bf6b" opacity="0.82"/>
+<rect x="247.78" y="298.72" width="11.11" height="51.28" fill="#20bf6b" opacity="0.82"/>
+<rect x="281.11" y="332.75" width="11.11" height="17.25" fill="#20bf6b" opacity="0.82"/>
+<rect x="314.44" y="345.69" width="11.11" height="4.31" fill="#20bf6b" opacity="0.82"/>
+<rect x="347.78" y="348.56" width="11.11" height="1.44" fill="#20bf6b" opacity="0.82"/>
+<rect x="381.11" y="348.08" width="11.11" height="1.92" fill="#20bf6b" opacity="0.82"/>
+<rect x="414.44" y="349.52" width="11.11" height="0.48" fill="#20bf6b" opacity="0.82"/>
+<rect x="447.78" y="350.00" width="11.11" height="0.00" fill="#20bf6b" opacity="0.82"/>
+<rect x="481.11" y="350.00" width="11.11" height="0.00" fill="#20bf6b" opacity="0.82"/>
+<rect x="514.44" y="350.00" width="11.11" height="0.00" fill="#20bf6b" opacity="0.82"/>
+<rect x="547.78" y="350.00" width="11.11" height="0.00" fill="#20bf6b" opacity="0.82"/>
+<rect x="581.11" y="350.00" width="11.11" height="0.00" fill="#20bf6b" opacity="0.82"/>
+<rect x="614.44" y="350.00" width="11.11" height="0.00" fill="#20bf6b" opacity="0.82"/>
+<rect x="647.78" y="350.00" width="11.11" height="0.00" fill="#20bf6b" opacity="0.82"/>
+<rect x="681.11" y="350.00" width="11.11" height="0.00" fill="#20bf6b" opacity="0.82"/>
+<rect x="714.44" y="350.00" width="11.11" height="0.00" fill="#20bf6b" opacity="0.82"/>
+<rect x="747.78" y="350.00" width="11.11" height="0.00" fill="#20bf6b" opacity="0.82"/>
+<rect x="781.11" y="350.00" width="11.11" height="0.00" fill="#20bf6b" opacity="0.82"/>
+<rect x="814.44" y="350.00" width="11.11" height="0.00" fill="#20bf6b" opacity="0.82"/>
+<rect x="847.78" y="350.00" width="11.11" height="0.00" fill="#20bf6b" opacity="0.82"/>
+<line x1="70.00" y1="350" x2="70.00" y2="355" stroke="#333"/>
+<text x="70.00" y="372" text-anchor="middle" font-family="Arial" font-size="11">8</text>
+<line x1="270.00" y1="350" x2="270.00" y2="355" stroke="#333"/>
+<text x="270.00" y="372" text-anchor="middle" font-family="Arial" font-size="11">18</text>
+<line x1="470.00" y1="350" x2="470.00" y2="355" stroke="#333"/>
+<text x="470.00" y="372" text-anchor="middle" font-family="Arial" font-size="11">27</text>
+<line x1="670.00" y1="350" x2="670.00" y2="355" stroke="#333"/>
+<text x="670.00" y="372" text-anchor="middle" font-family="Arial" font-size="11">37</text>
+<line x1="870.00" y1="350" x2="870.00" y2="355" stroke="#333"/>
+<text x="870.00" y="372" text-anchor="middle" font-family="Arial" font-size="11">47</text>
+<line x1="65" y1="350.00" x2="70" y2="{y:.2f}" stroke="#333"/>
+<text x="60" y="354.00" text-anchor="end" font-family="Arial" font-size="11">0</text>
+<line x1="65" y1="200.00" x2="70" y2="{y:.2f}" stroke="#333"/>
+<text x="60" y="204.00" text-anchor="end" font-family="Arial" font-size="11">313</text>
+<line x1="65" y1="50.00" x2="70" y2="{y:.2f}" stroke="#333"/>
+<text x="60" y="54.00" text-anchor="end" font-family="Arial" font-size="11">626</text>
+<text x="450.0" y="402" text-anchor="middle" font-family="Arial" font-size="13">Per-case mean WSS magnitude</text>
+<text x="18" y="210.0" text-anchor="middle" font-family="Arial" font-size="13" transform="rotate(-90 18 210.0)">Cases</text>
+<rect x="695" y="58" width="14" height="14" fill="#3867d6" opacity="0.82"/>
+<text x="717" y="70" font-family="Arial" font-size="12">single</text>
+<rect x="695" y="80" width="14" height="14" fill="#20bf6b" opacity="0.82"/>
+<text x="717" y="92" font-family="Arial" font-size="12">bifurcating</text>
+</svg>

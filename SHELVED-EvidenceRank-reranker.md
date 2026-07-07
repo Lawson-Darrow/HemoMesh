@@ -59,7 +59,7 @@ Train general (MS MARCO) → evaluate zero-shot on biomedical → then **domain-
 - Swap the cross-encoder backbone to a biomedical encoder (**PubMedBERT** / **BioLinkBERT**) vs. a general one (MiniLM) — does in-domain pretraining help the reranker?
 - Optional: **GenQ-style pseudo-labeling** (generate synthetic queries over the biomedical corpus) for unsupervised in-domain fine-tuning.
 
-All backbones are OSS (honors the prefer-OSS-tools principle); all training is local on the university GPU cluster (A100/H200), independent of the production inference gateway (which is inference-only and unavailable for embeddings).
+All backbones are OSS (honors the prefer-OSS-tools principle); all training is designed for a Linux GPU/runtime environment, independent of the production inference gateway (which is inference-only and unavailable for embeddings).
 
 ---
 

@@ -1,0 +1,3 @@
+subset,path,md5,num_samples,node_count_min,node_count_mean,node_count_max,face_count_min,face_count_mean,face_count_max,inlet_count_mean,wss_mag_mean,wss_mag_max,pressure_range_mean,pressure_range_max
+single,vessel-datasets/stead/single/raw/database.hdf5,ba365decba2357fb7b24de641a2133a1,2000,5466,9188.8475,12160,10928,18373.695,24316,235.4915,29.11461732641845,548.8169299587145,5215.11189453125,10114.375
+bifurcating,vessel-datasets/stead/bifurcating/raw/database.hdf5,b73d96148e4245be1121d57efb6e3d63,1999,8600,16836.585292646323,24800,17196,33669.170585292646,49596,837.11955977989,13.059838282241135,323.1413755520451,736.9500805090045,20919.5625

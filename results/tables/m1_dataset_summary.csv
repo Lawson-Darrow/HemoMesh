@@ -1,0 +1,3 @@
+subset,num_samples,md5,node_count_min,node_count_mean,node_count_max,face_count_min,face_count_mean,face_count_max,pos_shape_example,wss_shape_example,pressure_shape_example
+single,2000,ba365decba2357fb7b24de641a2133a1,5466,9188.85,12160,10928,18373.69,24316,"[10475, 3]","[10475, 3]",[10475]
+bifurcating,1999,b73d96148e4245be1121d57efb6e3d63,8600,16836.59,24800,17196,33669.17,49596,"[19217, 3]","[19217, 3]",[19217]

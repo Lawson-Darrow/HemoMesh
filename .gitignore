@@ -13,6 +13,11 @@ data/
 datasets/
 vessel-datasets/
 checkpoints/
+model-weights/
+external/
+vis/
+runs/
+.dl/
 *.pt
 *.pth
 *.ckpt
@@ -21,8 +26,7 @@ checkpoints/
 results/figures/*.png
 results/figures/*.pdf
 results/logs/*.log
-results/tables/*.csv
-results/artifacts/
+results/artifacts/*
 
 # Keep artifact directories documented
 !results/README.md
@@ -31,6 +35,9 @@ results/artifacts/
 !results/logs/.gitkeep
 !results/tables/.gitkeep
 !results/artifacts/.gitkeep
+!results/artifacts/*.csv
+!results/artifacts/*.json
+!results/artifacts/*.md
 
 # Reports may be regenerated from source
 report/*.aux

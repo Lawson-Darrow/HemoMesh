@@ -1,0 +1,18 @@
+run_type: baseline_reproduction
+source: Suk et al. coronary-mesh-convolution
+script: scripts/run_suk_gem_gcn_baseline.sh
+model: gem_gcn
+subsets:
+  - single
+  - bifurcating
+weights:
+  single: model-weights/stead_single.pt
+  bifurcating: model-weights/stead_bifurcating.pt
+outputs:
+  logs:
+    single: results/logs/m1_suk_gem_gcn_single.log
+    bifurcating: results/logs/m1_suk_gem_gcn_bifurcating.log
+  weight_manifest: results/artifacts/m1_model_weights_manifest.json
+environment:
+  upstream_file: external/coronary-mesh-convolution/environment.yml
+  note: Run in a Python 3.9 CUDA/PyG/GEM-CNN environment matching the upstream file.

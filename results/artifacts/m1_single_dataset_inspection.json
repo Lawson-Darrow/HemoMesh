@@ -1,0 +1,32 @@
+{
+  "example_shapes": {
+    "face": [
+      20946,
+      3
+    ],
+    "inlet_idcs": [
+      265
+    ],
+    "pos": [
+      10475,
+      3
+    ],
+    "pressure": [
+      10475
+    ],
+    "wss": [
+      10475,
+      3
+    ]
+  },
+  "face_count_max": 24316,
+  "face_count_mean": 18373.695,
+  "face_count_min": 10928,
+  "md5": "ba365decba2357fb7b24de641a2133a1",
+  "node_count_max": 12160,
+  "node_count_mean": 9188.8475,
+  "node_count_min": 5466,
+  "num_samples": 2000,
+  "path": "vessel-datasets/stead/single/raw/database.hdf5",
+  "subset": "single"
+}

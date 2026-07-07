@@ -35,7 +35,7 @@ Build mesh-based geometric-DL surrogates that predict per-node **wall shear stre
 3. **UQ (Axis B, the contribution):** **split/conformal prediction** (primary) · **deep ensembles** · **MC-dropout** (cheap baseline). **Evidential = stretch.**
 4. **Distribution shift:** **single → bifurcating** (topology, core) · **severity-stratified** split via a derived proxy (core) · **real-geometry VMR** qualitative stress test (stretch). **steady → pulsatile = excluded** (not in bundle).
 5. **Repo:** standalone `HemoMesh` (depends on / cites the Suk dataset).
-6. **Compute:** university GPU cluster; value is parallel ablation sweeps + ensembles, not raw scale (meshes are small).
+6. **Compute:** Colab or another Linux GPU runtime; value is reproducible baseline execution, parallel ablation sweeps, and ensembles, not raw scale (meshes are small).
 
 ---
 
@@ -105,7 +105,7 @@ report/  slides/
 ## 9. Risks & mitigations
 
 - **Severity proxy is noisy (Shift B).** Mitigate: pick the proxy with the clearest physical meaning (min lumen radius), validate it correlates with WSS/pressure extremes, and report the proxy as a result, not a hidden assumption.
-- **Mesh-transformer cost on 24k-node meshes.** Mitigate: multiscale pooling (as repo GEM-GCN does) / patchify; cluster handles it; transformer is the one new backbone, others are cheap/reused.
+- **Mesh-transformer cost on 24k-node meshes.** Mitigate: multiscale pooling (as repo GEM-GCN does), patchify, and run heavier sweeps in Colab or another Linux GPU runtime; transformer is the one new backbone, others are cheap/reused.
 - **Conformal under heavy shift may be trivially uninformative (coverage collapses).** That is itself the finding (UQ honestly signals "out of distribution"); pair with AUSE so the story isn't binary.
 - **Over-scope creep.** Evidential UQ, Shift C, and pulsatile are all explicitly stretch/out — do not let them into the graded core.
 

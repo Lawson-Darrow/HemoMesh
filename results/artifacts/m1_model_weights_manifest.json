@@ -1,0 +1,22 @@
+[
+  {
+    "bytes": 4222037,
+    "md5": "c04820da7d6eb715f0943ac5127be7c7",
+    "path": "model-weights/stead_bifurcating.pt"
+  },
+  {
+    "bytes": 4158989,
+    "md5": "a3f5967726e4ac98a17cc96cb38128aa",
+    "path": "model-weights/stead_bifurcating_deprecated.pt"
+  },
+  {
+    "bytes": 4222037,
+    "md5": "d910c4195bc73e3048ab716d5e6a26fd",
+    "path": "model-weights/stead_single.pt"
+  },
+  {
+    "bytes": 4158989,
+    "md5": "2477886edb393dd8bde68ec0cda20dd2",
+    "path": "model-weights/stead_single_deprecated.pt"
+  }
+]

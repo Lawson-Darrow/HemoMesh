@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420">
+<rect width="100%" height="100%" fill="white"/>
+<text x="450.0" y="28" text-anchor="middle" font-family="Arial" font-size="18" font-weight="bold">Mesh Node Count Distribution</text>
+<line x1="70" y1="350" x2="870" y2="350" stroke="#333"/>
+<line x1="70" y1="50" x2="70" y2="350" stroke="#333"/>
+<rect x="70.00" y="310.32" width="11.11" height="39.68" fill="#3867d6" opacity="0.82"/>
+<rect x="103.33" y="260.00" width="11.11" height="90.00" fill="#3867d6" opacity="0.82"/>
+<rect x="136.67" y="309.84" width="11.11" height="40.16" fill="#3867d6" opacity="0.82"/>
+<rect x="170.00" y="289.52" width="11.11" height="60.48" fill="#3867d6" opacity="0.82"/>
+<rect x="203.33" y="87.26" width="11.11" height="262.74" fill="#3867d6" opacity="0.82"/>
+<rect x="236.67" y="50.00" width="11.11" height="300.00" fill="#3867d6" opacity="0.82"/>
+<rect x="270.00" y="206.29" width="11.11" height="143.71" fill="#3867d6" opacity="0.82"/>
+<rect x="303.33" y="319.52" width="11.11" height="30.48" fill="#3867d6" opacity="0.82"/>
+<rect x="336.67" y="349.52" width="11.11" height="0.48" fill="#3867d6" opacity="0.82"/>
+<rect x="370.00" y="350.00" width="11.11" height="0.00" fill="#3867d6" opacity="0.82"/>
+<rect x="403.33" y="350.00" width="11.11" height="0.00" fill="#3867d6" opacity="0.82"/>
+<rect x="436.67" y="350.00" width="11.11" height="0.00" fill="#3867d6" opacity="0.82"/>
+<rect x="470.00" y="350.00" width="11.11" height="0.00" fill="#3867d6" opacity="0.82"/>
+<rect x="503.33" y="350.00" width="11.11" height="0.00" fill="#3867d6" opacity="0.82"/>
+<rect x="536.67" y="350.00" width="11.11" height="0.00" fill="#3867d6" opacity="0.82"/>
+<rect x="570.00" y="350.00" width="11.11" height="0.00" fill="#3867d6" opacity="0.82"/>
+<rect x="603.33" y="350.00" width="11.11" height="0.00" fill="#3867d6" opacity="0.82"/>
+<rect x="636.67" y="350.00" width="11.11" height="0.00" fill="#3867d6" opacity="0.82"/>
+<rect x="670.00" y="350.00" width="11.11" height="0.00" fill="#3867d6" opacity="0.82"/>
+<rect x="703.33" y="350.00" width="11.11" height="0.00" fill="#3867d6" opacity="0.82"/>
+<rect x="736.67" y="350.00" width="11.11" height="0.00" fill="#3867d6" opacity="0.82"/>
+<rect x="770.00" y="350.00" width="11.11" height="0.00" fill="#3867d6" opacity="0.82"/>
+<rect x="803.33" y="350.00" width="11.11" height="0.00" fill="#3867d6" opacity="0.82"/>
+<rect x="836.67" y="350.00" width="11.11" height="0.00" fill="#3867d6" opacity="0.82"/>
+<rect x="81.11" y="350.00" width="11.11" height="0.00" fill="#20bf6b" opacity="0.82"/>
+<rect x="114.44" y="350.00" width="11.11" height="0.00" fill="#20bf6b" opacity="0.82"/>
+<rect x="147.78" y="350.00" width="11.11" height="0.00" fill="#20bf6b" opacity="0.82"/>
+<rect x="181.11" y="349.52" width="11.11" height="0.48" fill="#20bf6b" opacity="0.82"/>
+<rect x="214.44" y="348.06" width="11.11" height="1.94" fill="#20bf6b" opacity="0.82"/>
+<rect x="247.78" y="347.10" width="11.11" height="2.90" fill="#20bf6b" opacity="0.82"/>
+<rect x="281.11" y="347.10" width="11.11" height="2.90" fill="#20bf6b" opacity="0.82"/>
+<rect x="314.44" y="339.35" width="11.11" height="10.65" fill="#20bf6b" opacity="0.82"/>
+<rect x="347.78" y="329.68" width="11.11" height="20.32" fill="#20bf6b" opacity="0.82"/>
+<rect x="381.11" y="319.03" width="11.11" height="30.97" fill="#20bf6b" opacity="0.82"/>
+<rect x="414.44" y="292.42" width="11.11" height="57.58" fill="#20bf6b" opacity="0.82"/>
+<rect x="447.78" y="262.42" width="11.11" height="87.58" fill="#20bf6b" opacity="0.82"/>
+<rect x="481.11" y="227.10" width="11.11" height="122.90" fill="#20bf6b" opacity="0.82"/>
+<rect x="514.44" y="223.71" width="11.11" height="126.29" fill="#20bf6b" opacity="0.82"/>
+<rect x="547.78" y="216.45" width="11.11" height="133.55" fill="#20bf6b" opacity="0.82"/>
+<rect x="581.11" y="223.71" width="11.11" height="126.29" fill="#20bf6b" opacity="0.82"/>
+<rect x="614.44" y="247.42" width="11.11" height="102.58" fill="#20bf6b" opacity="0.82"/>
+<rect x="647.78" y="286.13" width="11.11" height="63.87" fill="#20bf6b" opacity="0.82"/>
+<rect x="681.11" y="318.55" width="11.11" height="31.45" fill="#20bf6b" opacity="0.82"/>
+<rect x="714.44" y="328.23" width="11.11" height="21.77" fill="#20bf6b" opacity="0.82"/>
+<rect x="747.78" y="340.32" width="11.11" height="9.68" fill="#20bf6b" opacity="0.82"/>
+<rect x="781.11" y="341.77" width="11.11" height="8.23" fill="#20bf6b" opacity="0.82"/>
+<rect x="814.44" y="347.10" width="11.11" height="2.90" fill="#20bf6b" opacity="0.82"/>
+<rect x="847.78" y="347.58" width="11.11" height="2.42" fill="#20bf6b" opacity="0.82"/>
+<line x1="70.00" y1="350" x2="70.00" y2="355" stroke="#333"/>
+<text x="70.00" y="372" text-anchor="middle" font-family="Arial" font-size="11">5466</text>
+<line x1="270.00" y1="350" x2="270.00" y2="355" stroke="#333"/>
+<text x="270.00" y="372" text-anchor="middle" font-family="Arial" font-size="11">10300</text>
+<line x1="470.00" y1="350" x2="470.00" y2="355" stroke="#333"/>
+<text x="470.00" y="372" text-anchor="middle" font-family="Arial" font-size="11">15133</text>
+<line x1="670.00" y1="350" x2="670.00" y2="355" stroke="#333"/>
+<text x="670.00" y="372" text-anchor="middle" font-family="Arial" font-size="11">19966</text>
+<line x1="870.00" y1="350" x2="870.00" y2="355" stroke="#333"/>
+<text x="870.00" y="372" text-anchor="middle" font-family="Arial" font-size="11">24800</text>
+<line x1="65" y1="350.00" x2="70" y2="{y:.2f}" stroke="#333"/>
+<text x="60" y="354.00" text-anchor="end" font-family="Arial" font-size="11">0</text>
+<line x1="65" y1="200.00" x2="70" y2="{y:.2f}" stroke="#333"/>
+<text x="60" y="204.00" text-anchor="end" font-family="Arial" font-size="11">310</text>
+<line x1="65" y1="50.00" x2="70" y2="{y:.2f}" stroke="#333"/>
+<text x="60" y="54.00" text-anchor="end" font-family="Arial" font-size="11">620</text>
+<text x="450.0" y="402" text-anchor="middle" font-family="Arial" font-size="13">Nodes per case</text>
+<text x="18" y="210.0" text-anchor="middle" font-family="Arial" font-size="13" transform="rotate(-90 18 210.0)">Cases</text>
+<rect x="695" y="58" width="14" height="14" fill="#3867d6" opacity="0.82"/>
+<text x="717" y="70" font-family="Arial" font-size="12">single</text>
+<rect x="695" y="80" width="14" height="14" fill="#20bf6b" opacity="0.82"/>
+<text x="717" y="92" font-family="Arial" font-size="12">bifurcating</text>
+</svg>
