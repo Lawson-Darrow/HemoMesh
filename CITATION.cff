@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use this project, please cite it and the original Suk et al. coronary mesh dataset."
+title: "HemoMesh: Calibrated Uncertainty for Coronary WSS Surrogates"
+version: "0.1.0"
+date-released: "2026-07-07"
+authors:
+  - family-names: "Darrow"
+    given-names: "Lawson"
+keywords:
+  - coronary hemodynamics
+  - wall shear stress
+  - geometric deep learning
+  - uncertainty quantification
+  - conformal prediction
+license: "MIT"

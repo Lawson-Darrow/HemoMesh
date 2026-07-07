@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# Local data and model artifacts
+data/
+datasets/
+vessel-datasets/
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+
+# Experiment outputs that are regenerated locally
+results/figures/*.png
+results/figures/*.pdf
+results/logs/*.log
+results/tables/*.csv
+results/artifacts/
+
+# Keep artifact directories documented
+!results/README.md
+!results/experiments.csv
+!results/figures/.gitkeep
+!results/logs/.gitkeep
+!results/tables/.gitkeep
+!results/artifacts/.gitkeep
+
+# Reports may be regenerated from source
+report/*.aux
+report/*.log
+report/*.out
+report/*.toc
+slides/*.aux
+slides/*.log
+slides/*.out
+*.docx
+~$*.docx
+
+# OS/editor noise
+.DS_Store

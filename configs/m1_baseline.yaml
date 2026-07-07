@@ -1,0 +1,11 @@
+run_type: baseline_reproduction
+model: gem_gcn_pretrained
+subset: single
+split: pretrained_eval
+outputs:
+  experiment_log: results/experiments.csv
+  figures_dir: results/figures
+  tables_dir: results/tables
+notes:
+  dataset: Suk et al. coronary mesh dataset
+  target: per-node WSS vector
