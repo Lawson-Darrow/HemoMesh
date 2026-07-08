@@ -62,16 +62,17 @@ Drive.
 ## 5. Install Baseline Dependencies
 
 The upstream code was written for an older Python/PyTorch/PyG stack. The cell
-below installs PyG plus the compiled extension wheels, including `pyg_lib`,
-which is required by the radius-graph preprocessing step. If these commands fail
-in the current Colab image, use a Python 3.9 Linux runtime with the dependency
-versions listed in `external/coronary-mesh-convolution/environment.yml`.
+below pins a Colab-compatible PyTorch line before the PyTorch 2.6
+`weights_only=True` default, then installs matching PyG compiled extension
+wheels. If these commands fail in the current Colab image, use a Python 3.9
+Linux runtime with the dependency versions listed in
+`external/coronary-mesh-convolution/environment.yml`.
 
 ```python
 %cd /content/HemoMesh
 !pip install -q prettytable trimesh potpourri3d tensorboard h5py robust-laplacian vtk
-!pip install -q torch torchvision torchaudio
-!pip install -q torch-geometric
+!pip install -q torch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 --index-url https://download.pytorch.org/whl/cu121
+!pip install -q torch-geometric==2.5.3
 
 import torch
 
@@ -79,6 +80,7 @@ torch_version = torch.__version__.split("+")[0]
 cuda_version = torch.version.cuda
 cuda_tag = "cpu" if cuda_version is None else "cu" + cuda_version.replace(".", "")
 wheel_url = f"https://data.pyg.org/whl/torch-{torch_version}+{cuda_tag}.html"
+print(f"Torch: {torch.__version__}; CUDA: {cuda_version}")
 print(f"Installing PyG compiled extensions from {wheel_url}")
 !pip install -q pyg_lib torch_scatter torch_sparse torch_cluster torch_spline_conv -f {wheel_url}
 ```

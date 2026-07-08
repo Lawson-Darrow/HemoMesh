@@ -59,6 +59,14 @@ PY
 
 (
   cd "$UPSTREAM"
+  python - <<'PY'
+import torch
+import torch_geometric
+
+print(f"Torch version: {torch.__version__}")
+print(f"CUDA version: {torch.version.cuda}")
+print(f"PyG version: {torch_geometric.__version__}")
+PY
   python main.py --model gem_gcn --artery_type single --num_epochs 0 \
     2>&1 | tee "$RESULTS/m1_suk_gem_gcn_single.log"
   python main.py --model gem_gcn --artery_type bifurcating --num_epochs 0 \
