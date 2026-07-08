@@ -62,7 +62,7 @@ def ause(uncertainty: ArrayLike, absolute_error: ArrayLike) -> float:
     coverages = np.linspace(1.0, 0.0, len(err), endpoint=False)
     unc_curve = _retained_error_curve(err, order_unc)
     oracle_curve = _retained_error_curve(err, order_oracle)
-    return float(np.trapz(unc_curve - oracle_curve, coverages))
+    return float(abs(np.trapezoid(unc_curve - oracle_curve, coverages)))
 
 
 def _retained_error_curve(error: np.ndarray, removal_order: np.ndarray) -> np.ndarray:

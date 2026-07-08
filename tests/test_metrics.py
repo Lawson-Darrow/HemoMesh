@@ -13,6 +13,7 @@ from hemomesh.metrics import (
     rmse,
 )
 from hemomesh.uq import fit_absolute_residual_conformal
+from scripts.m3_uq_calibration import conformal_radius
 
 
 def test_field_metrics_perfect_prediction() -> None:
@@ -40,6 +41,12 @@ def test_conformal_interval_and_coverage() -> None:
     lower, upper = interval.predict(prediction)
 
     assert empirical_coverage(lower, upper, reference) == 1.0
+
+
+def test_conformal_radius_for_residual_norms() -> None:
+    residuals = np.asarray([0.1, 0.2, 0.3, 0.4])
+
+    assert conformal_radius(residuals, nominal_coverage=0.75) == 0.4
 
 
 def test_regression_ece_and_risk_coverage_curve() -> None:

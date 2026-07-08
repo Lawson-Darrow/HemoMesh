@@ -1,0 +1,3 @@
+ause,empirical_coverage,error_uncertainty_corr,mean_wss_error,method,nominal_coverage,radius,regression_ece,width
+,0.944714188048498,,18.156509399414062,split_conformal_wss_radius,0.9,52.131492614746094,,104.26298522949219
+6.0215084402127195,,0.35484821252724363,18.156509399414062,mc_dropout_uncertainty,,,16.290964356164395,

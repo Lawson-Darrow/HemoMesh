@@ -103,6 +103,17 @@ hemomesh-train --config configs/m2_mesh_gnn.yaml
 In Colab, use `notebooks/01_backbones.ipynb` for the same flow plus report-ready
 table and figure generation.
 
+## Uncertainty Workflow
+
+The M3 workflow calibrates uncertainty on the MeshGNN backbone with
+split-conformal WSS residual radii and MC-dropout risk-coverage analysis:
+
+```bash
+hemomesh-m3-uq --config configs/m3_uq_mesh_gnn.yaml
+```
+
+In Colab, use `notebooks/02_uq_calibration.ipynb`.
+
 ## Optional Baseline Logging
 
 Once baseline predictions or pretrained outputs are available, log the WSS

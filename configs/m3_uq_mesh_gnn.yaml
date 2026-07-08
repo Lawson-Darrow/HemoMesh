@@ -1,0 +1,35 @@
+run_type: uq_calibration
+model: mesh_gnn
+subset: single
+split: train_val_calibration_test
+seed: 5320
+data:
+  root: .
+  subset: single
+split_params:
+  train_cases: 48
+  val_cases: 16
+  calibration_cases: 16
+  test_cases: 16
+model_params:
+  hidden_features: [128, 128, 128]
+  dropout: 0.08
+  output_smoothing_steps: 2
+  output_smoothing_alpha: 0.35
+training:
+  epochs: 40
+  lr: 0.001
+  weight_decay: 0.0001
+  target_weights: [1.0, 1.0, 1.0, 0.2]
+uq:
+  nominal_coverage: 0.9
+  mc_dropout_passes: 20
+  risk_coverages: [1.0, 0.9, 0.8, 0.7, 0.5]
+outputs:
+  experiment_log: results/experiments.csv
+  summary_json: results/artifacts/m3_uq_summary.json
+  summary_md: results/artifacts/m3_uq_summary.md
+  summary_table: results/tables/m3_uq_summary.csv
+  risk_table: results/tables/m3_risk_coverage.csv
+  risk_figure: results/figures/m3_risk_coverage.svg
+  scatter_figure: results/figures/m3_uncertainty_error_scatter.svg

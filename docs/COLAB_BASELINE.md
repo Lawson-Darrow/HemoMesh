@@ -33,6 +33,27 @@ hemomesh-train --config configs/m2_mlp.yaml
 hemomesh-train --config configs/m2_mesh_gnn.yaml
 ```
 
+## Primary M3 UQ Workflow
+
+Use `notebooks/02_uq_calibration.ipynb` after the M2 backbone workflow. It runs
+split-conformal WSS residual calibration and MC-dropout risk-coverage analysis,
+then writes:
+
+```text
+results/artifacts/m3_uq_summary.json
+results/artifacts/m3_uq_summary.md
+results/tables/m3_uq_summary.csv
+results/tables/m3_risk_coverage.csv
+results/figures/m3_risk_coverage.svg
+results/figures/m3_uncertainty_error_scatter.svg
+```
+
+Equivalent command-line run:
+
+```bash
+hemomesh-m3-uq --config configs/m3_uq_mesh_gnn.yaml
+```
+
 ## Optional M1 GEM-GCN Reproduction Inputs
 
 The legacy pretrained GEM-GCN reproduction is now optional supporting material.

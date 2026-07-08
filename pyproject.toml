@@ -35,6 +35,7 @@ analysis = [
 hemomesh-inspect = "hemomesh.data.suk:main"
 hemomesh-log-baseline = "hemomesh.baselines.reproduce_suk:main"
 hemomesh-m1-dataset-eda = "scripts.m1_dataset_eda:main"
+hemomesh-m3-uq = "scripts.m3_uq_calibration:main"
 hemomesh-train = "hemomesh.train:main"
 
 [tool.setuptools.packages.find]
