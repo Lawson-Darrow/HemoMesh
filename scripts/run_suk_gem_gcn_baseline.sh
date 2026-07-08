@@ -12,6 +12,7 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 UPSTREAM="$ROOT/external/coronary-mesh-convolution"
 RESULTS="$ROOT/results/logs"
+CLEAR_PROCESSED="${CLEAR_PROCESSED:-1}"
 
 mkdir -p "$RESULTS"
 
@@ -32,10 +33,29 @@ for subset in single bifurcating; do
     echo "Missing pretrained weight file: $weight_file"
     exit 1
   fi
+  if [ "$CLEAR_PROCESSED" = "1" ]; then
+    rm -rf "$ROOT/vessel-datasets/stead/$subset/processed"
+  fi
 done
 
 ln -sfn "$ROOT/vessel-datasets" "$UPSTREAM/vessel-datasets"
 ln -sfn "$ROOT/model-weights" "$UPSTREAM/model-weights"
+
+python - <<'PY'
+from pathlib import Path
+
+path = Path("external/coronary-mesh-convolution/datasets.py")
+text = path.read_text(encoding="utf-8")
+old = "self.data, self.slices = torch.load(self.processed_paths[0])"
+new = "self.data, self.slices = torch.load(self.processed_paths[0], weights_only=False)"
+if old in text:
+    path.write_text(text.replace(old, new), encoding="utf-8")
+    print("Patched upstream dataset loading for PyTorch 2.6+ compatibility.")
+elif new in text:
+    print("Upstream dataset loading patch already present.")
+else:
+    raise SystemExit("Could not locate expected torch.load call in upstream datasets.py")
+PY
 
 (
   cd "$UPSTREAM"

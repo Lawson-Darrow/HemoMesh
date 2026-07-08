@@ -61,16 +61,26 @@ Drive.
 
 ## 5. Install Baseline Dependencies
 
-The upstream code was written for an older Python/PyTorch/PyG stack. If these
-commands fail in the current Colab image, use a Python 3.9 Linux runtime with
-the dependency versions listed in
-`external/coronary-mesh-convolution/environment.yml`.
+The upstream code was written for an older Python/PyTorch/PyG stack. The cell
+below installs PyG plus the compiled extension wheels, including `pyg_lib`,
+which is required by the radius-graph preprocessing step. If these commands fail
+in the current Colab image, use a Python 3.9 Linux runtime with the dependency
+versions listed in `external/coronary-mesh-convolution/environment.yml`.
 
 ```python
 %cd /content/HemoMesh
 !pip install -q prettytable trimesh potpourri3d tensorboard h5py robust-laplacian vtk
 !pip install -q torch torchvision torchaudio
 !pip install -q torch-geometric
+
+import torch
+
+torch_version = torch.__version__.split("+")[0]
+cuda_version = torch.version.cuda
+cuda_tag = "cpu" if cuda_version is None else "cu" + cuda_version.replace(".", "")
+wheel_url = f"https://data.pyg.org/whl/torch-{torch_version}+{cuda_tag}.html"
+print(f"Installing PyG compiled extensions from {wheel_url}")
+!pip install -q pyg_lib torch_scatter torch_sparse torch_cluster torch_spline_conv -f {wheel_url}
 ```
 
 Install the gauge-equivariant mesh convolution dependency. The repository URL is
@@ -90,6 +100,10 @@ if not target.exists():
 ```
 
 ## 6. Run Pretrained GEM-GCN Baselines
+
+This calls the project runner, which clears stale processed files and patches
+the upstream dataset loader for the PyTorch 2.6+ `torch.load(weights_only=True)`
+default before running the pretrained models.
 
 ```python
 %cd /content/HemoMesh
