@@ -70,19 +70,56 @@ Linux runtime with the dependency versions listed in
 
 ```python
 %cd /content/HemoMesh
-!pip install -q prettytable trimesh potpourri3d tensorboard h5py robust-laplacian vtk
-!pip install -q torch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 --index-url https://download.pytorch.org/whl/cu121
-!pip install -q torch-geometric==2.5.3
+!pip uninstall -y -q \
+  pyg_lib \
+  torch-scatter \
+  torch-sparse \
+  torch-cluster \
+  torch-spline-conv \
+  torch-geometric || true
+!pip cache purge -q || true
+!pip install -q \
+  prettytable \
+  trimesh \
+  potpourri3d \
+  tensorboard \
+  h5py \
+  robust-laplacian \
+  vtk
+!pip install -q --force-reinstall --no-cache-dir \
+  torch==2.5.1 \
+  torchvision==0.20.1 \
+  torchaudio==2.5.1 \
+  --index-url https://download.pytorch.org/whl/cu121
+!pip install -q --force-reinstall --no-cache-dir torch-geometric==2.5.3
 
-import torch
-
+torch = __import__("torch")
 torch_version = torch.__version__.split("+")[0]
 cuda_version = torch.version.cuda
 cuda_tag = "cpu" if cuda_version is None else "cu" + cuda_version.replace(".", "")
 wheel_url = f"https://data.pyg.org/whl/torch-{torch_version}+{cuda_tag}.html"
 print(f"Torch: {torch.__version__}; CUDA: {cuda_version}")
 print(f"Installing PyG compiled extensions from {wheel_url}")
-!pip install -q pyg_lib torch_scatter torch_sparse torch_cluster torch_spline_conv -f {wheel_url}
+!pip install -q --force-reinstall --no-cache-dir \
+  pyg_lib \
+  torch_scatter \
+  torch_sparse \
+  torch_cluster \
+  torch_spline_conv \
+  -f {wheel_url}
+
+for module_name in (
+    "pyg_lib",
+    "torch_cluster",
+    "torch_scatter",
+    "torch_sparse",
+    "torch_spline_conv",
+):
+    __import__(module_name)
+
+torch_geometric = __import__("torch_geometric")
+print(f"PyG: {torch_geometric.__version__}")
+print("PyG compiled extensions imported successfully.")
 ```
 
 Install the gauge-equivariant mesh convolution dependency. The repository URL is
