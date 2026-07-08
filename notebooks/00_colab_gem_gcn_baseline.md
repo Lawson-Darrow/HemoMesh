@@ -107,6 +107,8 @@ default before running the pretrained models.
 
 ```python
 %cd /content/HemoMesh
+!git pull --ff-only
+!grep -n "weights_only" scripts/run_suk_gem_gcn_baseline.sh
 !bash scripts/run_suk_gem_gcn_baseline.sh
 ```
 
