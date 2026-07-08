@@ -23,6 +23,7 @@ faces, and inlet indices. No new CFD data generation is part of the core scope.
 Core components:
 
 - Data loading and validation for Suk-style HDF5 coronary mesh datasets.
+- Modern-stack MLP and mesh-GNN training for WSS and pressure fields.
 - Field metrics for WSS and pressure regression.
 - Calibration, uncertainty, and selective-deferral metrics.
 - Baseline logging and reproducible experiment manifests.
@@ -89,7 +90,20 @@ hemomesh-inspect vessel-datasets/stead/bifurcating/raw/database.hdf5 --subset bi
 The inspection command reports case counts, tensor shapes, and MD5 checksums so
 the report can cite exact data provenance.
 
-## Baseline Logging
+## Primary Training Workflow
+
+The main backbone workflow trains a dense per-node MLP and a message-passing
+MeshGNN on the Suk meshes:
+
+```bash
+hemomesh-train --config configs/m2_mlp.yaml
+hemomesh-train --config configs/m2_mesh_gnn.yaml
+```
+
+In Colab, use `notebooks/01_backbones.ipynb` for the same flow plus report-ready
+table and figure generation.
+
+## Optional Baseline Logging
 
 Once baseline predictions or pretrained outputs are available, log the WSS
 approximation error through the experiment harness:

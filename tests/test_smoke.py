@@ -4,9 +4,10 @@ import csv
 
 import h5py
 import numpy as np
+import pytest
 
 from hemomesh.baselines.reproduce_suk import log_wss_baseline
-from hemomesh.data import SukHDF5Dataset, inspect_database
+from hemomesh.data import SukHDF5Dataset, build_graph, fit_tensor_normalizer, inspect_database
 
 
 def _write_tiny_database(path) -> None:
@@ -60,3 +61,42 @@ def test_baseline_logging_smoke(tmp_path) -> None:
     assert row["model"] == "gem_gcn_pretrained"
     assert len(rows) == 1
     assert "wss_approximation_error" in rows[0]["metrics_json"]
+
+
+def test_build_graph_smoke(tmp_path) -> None:
+    pytest.importorskip("torch")
+    pytest.importorskip("torch_geometric")
+    database = tmp_path / "database.hdf5"
+    _write_tiny_database(database)
+
+    sample = SukHDF5Dataset(database, subset="single")[0]
+    graph = build_graph(sample)
+
+    assert graph.x.shape == (3, 4)
+    assert graph.y.shape == (3, 4)
+    assert graph.edge_index.shape == (2, 6)
+    assert graph.sample_id == "sample_0000"
+
+
+def test_single_training_step_smoke(tmp_path) -> None:
+    torch = pytest.importorskip("torch")
+    pytest.importorskip("torch_geometric")
+    database = tmp_path / "database.hdf5"
+    _write_tiny_database(database)
+
+    from hemomesh.models import MLPFieldRegressor
+    from hemomesh.train import train_one_epoch
+
+    sample = SukHDF5Dataset(database, subset="single")[0]
+    graph = build_graph(sample)
+    x_normalizer = fit_tensor_normalizer([graph.x])
+    y_normalizer = fit_tensor_normalizer([graph.y])
+    graph.y_raw = graph.y.clone()
+    graph.x = x_normalizer.transform(graph.x)
+    graph.y = y_normalizer.transform(graph.y)
+
+    model = MLPFieldRegressor(in_features=4, out_features=4, hidden_features=(8,))
+    optimizer = torch.optim.AdamW(model.parameters(), lr=0.01)
+    loss = train_one_epoch(model, [graph], optimizer, model_name="mlp")
+
+    assert loss >= 0.0

@@ -1,0 +1,26 @@
+run_type: backbone_training
+model: mesh_gnn
+subset: single
+split: random_case_split
+seed: 5320
+data:
+  root: .
+  subset: single
+split_params:
+  train_cases: 64
+  val_cases: 24
+  test_cases: 24
+model_params:
+  hidden_features: [128, 128, 128]
+  dropout: 0.0
+  output_smoothing_steps: 2
+  output_smoothing_alpha: 0.35
+training:
+  epochs: 120
+  lr: 0.001
+  weight_decay: 0.0001
+  target_weights: [1.0, 1.0, 1.0, 0.2]
+outputs:
+  experiment_log: results/experiments.csv
+  case_metrics: results/tables/m2_mesh_gnn_case_metrics.csv
+  summary_json: results/artifacts/m2_mesh_gnn_summary.json

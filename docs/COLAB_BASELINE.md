@@ -1,8 +1,8 @@
-# Colab Baseline Workflow
+# Colab Workflows
 
-Colab is the default runtime for reproducing the pretrained Suk et al. GEM-GCN
-baseline. The local workspace remains the source repository for code, report
-artifacts, and GitHub history; Colab provides the Linux GPU environment.
+Colab is the default runtime for HemoMesh model experiments. The local workspace
+remains the source repository for code, report artifacts, and GitHub history;
+Colab provides the Linux GPU environment.
 
 ## Runtime
 
@@ -11,9 +11,32 @@ In Colab, choose:
 - Runtime type: Python
 - Hardware accelerator: GPU
 
-## Inputs
+## Primary M2 Backbone Workflow
 
-The baseline needs:
+Use `notebooks/01_backbones.ipynb` for the main project path. It clones the
+public repository, installs the modern training stack, verifies the Suk dataset,
+trains the dense MLP and MeshGNN backbones, and writes:
+
+```text
+results/artifacts/m2_mlp_summary.json
+results/artifacts/m2_mesh_gnn_summary.json
+results/tables/m2_mlp_case_metrics.csv
+results/tables/m2_mesh_gnn_case_metrics.csv
+results/tables/m2_backbone_comparison.csv
+results/figures/m2_backbone_comparison.svg
+```
+
+Equivalent command-line runs:
+
+```bash
+hemomesh-train --config configs/m2_mlp.yaml
+hemomesh-train --config configs/m2_mesh_gnn.yaml
+```
+
+## Optional M1 GEM-GCN Reproduction Inputs
+
+The legacy pretrained GEM-GCN reproduction is now optional supporting material.
+It needs:
 
 - Public HemoMesh repository: `https://github.com/Lawson-Darrow/HemoMesh`
 - Suk dataset under `vessel-datasets/stead/`
@@ -23,28 +46,28 @@ The baseline needs:
 Raw HDF5 files and checkpoint files should not be committed to GitHub. Download
 them inside Colab or copy them from Drive.
 
-## Recommended Flow
+## Optional M1 GEM-GCN Flow
 
 1. Open `notebooks/00_colab_gem_gcn_baseline.ipynb` in Colab.
-2. Run the setup cells to clone HemoMesh and the upstream implementation.
-3. Download the Suk dataset and pretrained weights inside Colab.
-4. Install the baseline dependencies.
-5. Run the baseline cell, which calls:
+1. Run the setup cells to clone HemoMesh and the upstream implementation.
+1. Download the Suk dataset and pretrained weights inside Colab.
+1. Install the baseline dependencies.
+1. Run the baseline cell, which calls:
 
 ```bash
 bash scripts/run_suk_gem_gcn_baseline.sh
 ```
 
-6. Download or copy back:
+1. Download or copy back:
 
 ```text
 results/logs/m1_suk_gem_gcn_single.log
 results/logs/m1_suk_gem_gcn_bifurcating.log
 ```
 
-7. Place those logs in the local workspace under `results/logs/`.
+1. Place those logs in the local workspace under `results/logs/`.
 
-## Expected Output
+## Optional GEM-GCN Expected Output
 
 Each log should include the upstream metric table with:
 
@@ -57,7 +80,7 @@ Each log should include the upstream metric table with:
 - CS_mean
 
 After the logs are available locally, parse them into `results/experiments.csv`
-and cite the values in the M1 baseline reproduction section of the report.
+and cite the values in an optional M1 baseline reproduction section.
 
 ## Notes
 
